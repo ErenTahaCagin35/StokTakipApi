@@ -21,7 +21,7 @@ public partial class StokTakip1927Context : DbContext
 
     public virtual DbSet<TblMusteriler> TblMusterilers { get; set; }
 
-    public virtual DbSet<TblStokCiki> TblStokCikis { get; set; }
+    public virtual DbSet<TblStokCikis> TblStokCikis { get; set; }
 
     public virtual DbSet<TblStokGiris> TblStokGirises { get; set; }
 
@@ -67,7 +67,7 @@ public partial class StokTakip1927Context : DbContext
             entity.Property(e => e.YetkiliAdSoyad).HasMaxLength(50);
         });
 
-        modelBuilder.Entity<TblStokCiki>(entity =>
+        modelBuilder.Entity<TblStokCikis>(entity =>
         {
             entity.HasKey(e => e.IslemId);
 
